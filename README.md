@@ -90,4 +90,6 @@ If you'd like more information on Asterisk, read
 
 ## Changelog
 
-- No releases yet!
+v1.0: 9-22-2012
+
+    - First release! Supports OpenCNAM V2 hobbist and professional tiers.
