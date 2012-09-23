@@ -3,7 +3,8 @@
 The simplest way to add caller ID name information to your Asterisk-based PBX
 system.
 
-``asterisk-opencnam`` should work with Asterisk 1.2+.
+``asterisk-opencnam`` should work with Asterisk 1.2+. This module requires
+Asterisk to have `curl` support built in.
 
 
 ## Install
