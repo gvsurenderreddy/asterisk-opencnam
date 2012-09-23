@@ -50,7 +50,7 @@ Below is an example:
 ;; /etc/asterisk/extensions.conf
 
 [from-pstn]
-exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid,${EXTEN})
+exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid)
 exten => _NXXNXXXXXX,n,NoOp(This caller's name is: ${CALLERID(name)})
 exten => _NXXNXXXXXX,n,Answer()
 exten => _NXXNXXXXXX,n,...
@@ -59,6 +59,20 @@ exten => _NXXNXXXXXX,n,...
 The code above will take the incoming caller's 10-digit US phone number, and
 call the ``opencnam-set-callerid`` subroutine which will update the caller ID
 name information for the call.
+
+If you're an OpenCNAM professional tier user (OpenCNAM's professional tier
+costs money, but gives you real-time lookups and no throttling) you can specify
+your account credentials by changing your `Gosub` line to read:
+
+``` asterisk
+;; /etc/asterisk/extensions.conf
+
+[from-pstn]
+exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid,my-account-sid,my-auth-token)
+exten => _NXXNXXXXXX,n,NoOp(This caller's name is: ${CALLERID(name)})
+exten => _NXXNXXXXXX,n,Answer()
+exten => _NXXNXXXXXX,n,...
+```
 
 
 ## Reference
