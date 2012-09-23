@@ -50,7 +50,7 @@ Below is an example:
 ;; /etc/asterisk/extensions.conf
 
 [from-pstn]
-exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid)
+exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid,s,1)
 exten => _NXXNXXXXXX,n,NoOp(This caller's name is: ${CALLERID(name)})
 exten => _NXXNXXXXXX,n,Answer()
 exten => _NXXNXXXXXX,n,...
@@ -68,7 +68,7 @@ your account credentials by changing your `Gosub` line to read:
 ;; /etc/asterisk/extensions.conf
 
 [from-pstn]
-exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid,my-account-sid,my-auth-token)
+exten => _NXXNXXXXXX,1,Gosub(opencnam-set-callerid,s,1(my-account-sid,my-auth-token))
 exten => _NXXNXXXXXX,n,NoOp(This caller's name is: ${CALLERID(name)})
 exten => _NXXNXXXXXX,n,Answer()
 exten => _NXXNXXXXXX,n,...
