@@ -14,7 +14,7 @@ To install ``asterisk-opencnam``, log into your Asterisk server(s) and run:
 ``` bash
 $ mkdir -p /var/lib/asterisk/modules
 $ cd /var/lib/asterisk/modules/
-$ git clone git://github.com/rdegges/asterisk-opencnam.git
+$ git clone git://github.com/telephonyresearch/asterisk-opencnam.git
 ```
 
 Then edit your ``/etc/asterisk/extensions.conf`` file, and append:
