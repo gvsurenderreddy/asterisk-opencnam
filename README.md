@@ -90,6 +90,13 @@ If you'd like more information on Asterisk, read
 
 ## Changelog
 
+v1.1: 10-30-2012
+
+    - Adding a 5 second CNAM timeout. This prevents calls from hanging if
+      anything bad happens (internet dies, OpenCNAM has problems, etc.).
+    - Fixing a bug where we'd do two CNAM lookups (one anonymously and one paid)
+      regardless of the user's settings.
+
 v1.0: 9-22-2012
 
     - First release! Supports OpenCNAM V2 hobbist and professional tiers.
